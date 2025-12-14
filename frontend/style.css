@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: black;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.login-btn {
+  background: #1e90ff;
+}
+
+.signup-btn {
+  background: #555;
+}
+
+.login-btn:hover { background: #0b5ed7; }
+.signup-btn:hover { background: #333; }
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  height: calc(100vh - 80px);
+}
+
+.hero-text {
+  width: 50%;
+  background: black;
+  color: white;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-text h1 {
+  font-size: 56px;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.btn-blue {
+  background: #0d6efd;
+  color: white;
+}
+
+.btn:hover {
+  opacity : 0.85;
+}
+
+.hero-image {
+  width: 50%;
+  background: url("images/home-bg.jpg") center/cover no-repeat;
+}
+
+/* AUTH PAGES */
+.auth-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-bg {
+  background: url("images/login-bg.jpg") center/cover no-repeat;
+}
+
+.signup-bg {
+  background: url("images/signup-bg.jpg") center/cover no-repeat;
+}
+
+.auth-box {
+  background: rgba(0,0,0,0.75);
+  padding: 40px;
+  width: 380px;
+  border-radius: 12px;
+  color: white;
+}
+
+.auth-box h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.auth-box input,
+.auth-box select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border-radius: 6px;
+  border: none;
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 12px;
+  background: #1e90ff;
+  color: white;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+.auth-box button:hover {
+  background: #0b5ed7;
+}
+
+.auth-box p {
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* DASHBOARD */
+.dashboard {
+  height: 100vh;
+  background: #f4f6f8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
