@@ -8,7 +8,7 @@ const authRoutes = require("./routes/auth");
 const adminRoutes = require("./routes/admin");
 const projectRoutes = require("./routes/projectRoutes");
 //const companyRoutes = require("./routes/company");
-//const slotRoutes = require("./routes/slotRoutes");
+const slotRoutes = require("./routes/slotRoutes");
 
 const app = express();
 
@@ -21,7 +21,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/api", projectRoutes);
 //app.use("/api/company", companyRoutes);
-//app.use("/api/slots", slotRoutes);
+app.use("/api/slots", slotRoutes);
 
 // Test route
 app.get("/", (req, res) => {

@@ -1,22 +1,53 @@
 .slot-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 20px;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
-.slot-card {
+/* COMMON SLOT BOX */
+.slot-box {
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 12px;
+  color: #fff;
   text-align: center;
-  font-weight: bold;
-  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.slot-card.available {
-  background-color: green;
+/* AVAILABLE = STRONG GREEN */
+.slot-box.available {
+  background-color: #16a34a; /* solid green */
 }
 
-.slot-card.booked {
-  background-color: red;
+/* BOOKED = STRONG RED */
+.slot-box.booked {
+  background-color: #dc2626; /* solid red */
+}
+
+/* HOVER EFFECT */
+.slot-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* SLOT TEXT */
+.slot-box h3 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.slot-box p {
+  margin-top: 6px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* SELECTED SLOT DETAILS */
+.slot-details {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #f3f4f6;
+  max-width: 350px;
 }
