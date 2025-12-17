@@ -1,27 +1,46 @@
+// routes/project.js
 const express = require("express");
 const router = express.Router();
 
-// Step 4: Project Description Route
-router.get("/project-description", (req, res) => {
-  res.json({
-    message: "This is a Smart Parking System backend. It includes user authentication, admin access, slot management, and MongoDB connection."
+/**
+ * GET /api/project/description
+ * Returns a short description of the project.
+ */
+router.get("/description", (req, res) => {
+  return res.json({
+    success: true,
+    data: {
+      name: "Smart Parking Management System",
+      short: "A full-stack system for managing parking slots, users and admin controls.",
+      features: [
+        "User registration & login (JWT auth)",
+        "Role-based access (user / admin)",
+        "Company & Slot management",
+        "APIs for creating & listing data"
+      ],
+      techStack: ["Node.js", "Express", "MongoDB Atlas", "Mongoose", "JWT"]
+    }
   });
 });
 
-// Step 5: Project Status Route
-router.get("/project-status", (req, res) => {
-  res.json({
-    status: "Milestone 1 completed",
-    completed: [
-      "Express setup",
-      "Routing",
-      "Controllers",
-      "MongoDB connection",
-      "User Registration + Login",
-      "Password Hashing",
-      "JWT verification",
-      "Role-based access"
-    ]
+/**
+ * GET /api/project/status
+ * Returns the written/completion status of the project.
+ */
+router.get("/status", (req, res) => {
+  return res.json({
+    success: true,
+    data: {
+      writtenStatus: "In progress",
+      percentComplete: 65,               // example numeric progress
+      nextTasks: [
+        "Seed parking slots and test slot APIs",
+        "Connect frontend login & admin pages",
+        "Add slot booking endpoints",
+        "Add deployment scripts"
+      ],
+      lastUpdated: "2025-12-10"          // update as appropriate
+    }
   });
 });
 
